@@ -1,0 +1,360 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:6203574964986346214",
+      "lastPropertyId": "4:1256884700509201657",
+      "name": "Task",
+      "properties": [
+        {
+          "id": "1:983788588060172940",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1462778270467444084",
+          "name": "title",
+          "type": 9
+        },
+        {
+          "id": "3:5681929398015411005",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:1256884700509201657",
+          "name": "completed",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:7804767612861427598",
+      "lastPropertyId": "10:41822476722790427",
+      "name": "User",
+      "properties": [
+        {
+          "id": "1:7324505757433743751",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "3:4013048873846285638",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "4:5351508773239318695",
+          "name": "password",
+          "type": 9
+        },
+        {
+          "id": "5:4884365913611055581",
+          "name": "userType",
+          "type": 9
+        },
+        {
+          "id": "10:41822476722790427",
+          "name": "name",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:3094245831898735718",
+      "lastPropertyId": "11:3566681764700289165",
+      "name": "Location",
+      "properties": [
+        {
+          "id": "1:2216057211385636799",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:7761140985452315153",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:5423494327778376791",
+          "name": "address",
+          "type": 9
+        },
+        {
+          "id": "4:4997140736630017738",
+          "name": "latitude",
+          "type": 8
+        },
+        {
+          "id": "5:4629217888760352295",
+          "name": "longitude",
+          "type": 8
+        },
+        {
+          "id": "6:7450571342976524880",
+          "name": "area",
+          "type": 8
+        },
+        {
+          "id": "7:3835409327752521828",
+          "name": "areaUnit",
+          "type": 9
+        },
+        {
+          "id": "8:5545603750358758836",
+          "name": "productId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:5720394689668237049",
+          "relationTarget": "Product"
+        },
+        {
+          "id": "9:8410501688122469696",
+          "name": "farmerId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:8720277562539817613",
+          "relationTarget": "User"
+        },
+        {
+          "id": "10:5718431684903668953",
+          "name": "soilType",
+          "type": 9
+        },
+        {
+          "id": "11:3566681764700289165",
+          "name": "irrigationSource",
+          "type": 9
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:6984787870518800398",
+      "lastPropertyId": "7:3835318904732984867",
+      "name": "Product",
+      "properties": [
+        {
+          "id": "1:2630233465698813483",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2376018006399786912",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "3:4213320682570312023",
+          "name": "description",
+          "type": 9
+        },
+        {
+          "id": "4:388437071970421256",
+          "name": "price",
+          "type": 8
+        },
+        {
+          "id": "5:8116362379528988616",
+          "name": "unit",
+          "type": 9
+        },
+        {
+          "id": "6:8459854879320119925",
+          "name": "imageUrl",
+          "type": 9
+        },
+        {
+          "id": "7:3835318904732984867",
+          "name": "searchName",
+          "type": 9,
+          "flags": 2048,
+          "indexId": "3:5327518951975811820"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:8949135053545029084",
+      "lastPropertyId": "7:7622747632172589581",
+      "name": "ProductInventory",
+      "properties": [
+        {
+          "id": "1:2943177376861745888",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1036621093073136347",
+          "name": "quantity",
+          "type": 8
+        },
+        {
+          "id": "3:2548115026585242183",
+          "name": "unit",
+          "type": 9
+        },
+        {
+          "id": "4:6331056426678015913",
+          "name": "lastUpdated",
+          "type": 6
+        },
+        {
+          "id": "5:4521599785982244722",
+          "name": "productId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "4:5246482274717876947",
+          "relationTarget": "Product"
+        },
+        {
+          "id": "6:7722129257742454078",
+          "name": "ownerId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "5:3523053630897722710",
+          "relationTarget": "User"
+        },
+        {
+          "id": "7:7622747632172589581",
+          "name": "updateDate",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:8330730195187299600",
+      "lastPropertyId": "10:4782722850852798033",
+      "name": "Transaction",
+      "properties": [
+        {
+          "id": "1:4808068654467525642",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:347892589680607268",
+          "name": "timestamp",
+          "type": 6
+        },
+        {
+          "id": "3:8258650355422369148",
+          "name": "transactionType",
+          "type": 9
+        },
+        {
+          "id": "4:339624576798560719",
+          "name": "quantity",
+          "type": 8
+        },
+        {
+          "id": "5:5235630908232914180",
+          "name": "unit",
+          "type": 9
+        },
+        {
+          "id": "6:3567306614737745088",
+          "name": "totalAmount",
+          "type": 8
+        },
+        {
+          "id": "7:4376576166020672526",
+          "name": "status",
+          "type": 9
+        },
+        {
+          "id": "8:8560117620301067180",
+          "name": "userId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "6:1864992245298789179",
+          "relationTarget": "User"
+        },
+        {
+          "id": "9:3331497876529871334",
+          "name": "productId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "7:6520073067989544735",
+          "relationTarget": "Product"
+        },
+        {
+          "id": "10:4782722850852798033",
+          "name": "date",
+          "type": 10
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "7:5986301312473222549",
+      "lastPropertyId": "6:4377844575307259221",
+      "name": "MSP",
+      "properties": [
+        {
+          "id": "1:69721454045361692",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3416387799428872640",
+          "name": "cropName",
+          "type": 9
+        },
+        {
+          "id": "3:2603645831151789602",
+          "name": "price",
+          "type": 8
+        },
+        {
+          "id": "4:3503685927518626745",
+          "name": "unit",
+          "type": 9
+        },
+        {
+          "id": "5:2767569888473830841",
+          "name": "lastUpdated",
+          "type": 6
+        },
+        {
+          "id": "6:4377844575307259221",
+          "name": "updateDate",
+          "type": 10
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "7:5986301312473222549",
+  "lastIndexId": "9:6259564995886817808",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [
+    6259564995886817808,
+    3168229649781365458
+  ],
+  "retiredPropertyUids": [
+    431765584011425184,
+    6541402689796740313,
+    275380636407023768,
+    3828884080114430896,
+    7323750433407031775
+  ],
+  "retiredRelationUids": [],
+  "version": 1
+}
